@@ -47,17 +47,17 @@ void mostra_vetor(int* L, int m)
 int manipula_vetor( int* L, int m)
 {
 	int meio,ant ,pos ,aux;
-	meio = m/2; //aqui definimos onde é o meio do vetor
+	meio = m/2; //aqui definimos onde eh o meio do vetor
 	int i = 0;
-	ant = 1; //isso aqui é um aux para numeros impares (anteriores)
+	ant = 1; //isso aqui eh um aux para numeros impares (anteriores)
 
 	if (meio%2 == 0)
 	 {
-	   pos = meio; //para um vetor m/2 par
+	   pos = meio; //para um vetor m/2 impar
 	 }
 	else
 	 {
-	   pos = meio; //para um vetor impar (a sua divisao por 2 dará um numero inteiro extraido de um decimal arredontado para baixo)
+	   pos = meio +1; //para um vetor par (a sua divisao por 2 dará um numero inteiro extraido de um decimal arredontado para baixo)
 	 }
 	
 	//while para manipular o vetor, ele faz a troca de um elemento ant por um pos indo de 2 em 2
