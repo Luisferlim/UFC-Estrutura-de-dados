@@ -14,12 +14,12 @@ int main()
 
     cout << "digite o tamanho do vetor L: ";
     cin >> m;
-    int vetor[m]; //criação do vetor L, aqui chamado de vetor somente
+    int vetor[m]; //criaÃ§Ã£o do vetor L, aqui chamado de vetor somente
     
-    //chamando as funções
+    //chamando as funÃ§Ãµes
     insere_vetor(vetor, m);
-	manipula_vetor(vetor, m);
-	mostra_vetor(vetor, m);
+    manipula_vetor(vetor, m);
+    mostra_vetor(vetor, m);
 	
 	return 0;
 }
@@ -28,7 +28,7 @@ int insere_vetor (int* L, int m)
 {
     for (int i = 0; i<m; i++)
     {
-        cout << "insira o " << i+1 << "° elemento: ";
+        cout << "insira o " << i+1 << "Â° elemento: ";
         cin >> L[i];
     }
     
@@ -48,8 +48,8 @@ void mostra_vetor(int* L, int m)
 
 int manipula_vetor( int* L, int m)
 {
-	int aux; //auxiliar para operações com elementos do vetor
-	int pontaux = m/2; // esse aqui é um ponteiro' para manipular elementos no vetor aux
+    int aux; //auxiliar para operaÃ§Ãµes com elementos do vetor
+    int pontaux = m/2; // esse aqui Ã© um ponteiro' para manipular elementos no vetor aux
     int vetaux[m/2]; // isso eh um vetor aux para ordenar corretamente os elementos
     int contador = 0; // contador de elementos do vetor aux
 	
