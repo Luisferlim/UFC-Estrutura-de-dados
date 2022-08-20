@@ -17,8 +17,8 @@ int main()
     
     //chamando as funções
     insere_vetor(vetor, m);
-	manipula_vetor(vetor, m);
-	mostra_vetor(vetor, m);
+    manipula_vetor(vetor, m);
+    mostra_vetor(vetor, m);
 	
 	return 0;
 }
@@ -35,7 +35,7 @@ int insere_vetor (int* L, int m)
 
 void mostra_vetor(int* L, int m)
 {
-    cout << "aqui está o vetor propriamente manipulado: ";
+    cout << "aqui esta o vetor propriamente manipulado: ";
 	cout << "[";
 	for (int i = 0; i < m; i++)
 	{
@@ -60,6 +60,7 @@ int manipula_vetor( int* L, int m)
 	   pos = meio; //para um vetor impar (a sua divisao por 2 dará um numero inteiro extraido de um decimal arredontado para baixo)
 	 }
 	
+	//while para manipular o vetor, ele faz a troca de um elemento ant por um pos indo de 2 em 2
 	while(ant < meio && pos < m)
 	{
 	    
@@ -67,7 +68,7 @@ int manipula_vetor( int* L, int m)
 	    L[ant] = L[pos];
 	    L[pos] = aux;
 	    ant +=2;
-	    pos +=1;
+	    pos +=2;
 	}
 		return *L; //aqui ele retorna o vetor manipulado
 }
