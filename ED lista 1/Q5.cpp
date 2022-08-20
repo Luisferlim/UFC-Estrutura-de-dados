@@ -17,24 +17,26 @@ int main()
     cout << "digite o numero n de elementos que contem no vetor: ";
     cin >> n;
     
-    int vetor[m]; //criação do vetor L, aqui chamado de vetor somente
+    int vetor[m]; //criaÃ§Ã£o do vetor L, aqui chamado de vetor somente
    
-    //chamando as funções
+    //chamando as funÃ§Ãµes
     insere_vetor(vetor, m, n);
-	manipula_vetor(vetor, m, n);
-	mostra_vetor(vetor, m);
+    manipula_vetor(vetor, m, n);
+    mostra_vetor(vetor, m);
 	
 	return 0;
 }
 
 int insere_vetor (int* L, int m, int n)
 {
+    //adicionando os n elementos do vetor
     for (int i = 0; i<n; i++)
     {
-        cout << "insira o " << i+1 << "° elemento: ";
+        cout << "insira o " << i+1 << "Â° elemento: ";
         cin >> L[i];
     }
-    for (int j = n; j < m; j++)
+    //preenchendo o restante das posiÃ§Ãµes com 0's
+    for (int j = n; j < m; j++) 
     {
     	L[j] = 0;
 	}
@@ -43,7 +45,7 @@ int insere_vetor (int* L, int m, int n)
 
 void mostra_vetor(int* L, int m)
 {
-    cout << "aqui está o vetor propriamente manipulado: ";
+    cout << "aqui esta o vetor propriamente manipulado: ";
 	cout << "[";
 	for (int i = 0; i < m; i++)
 	{
@@ -54,14 +56,14 @@ void mostra_vetor(int* L, int m)
 
 int manipula_vetor( int* L, int m, int n)
 {
-	int i = n-1, aux, final = L[n-1];
-	while (i >= 0)
+	int i = n-1, aux, final = L[n-1]; //ele guarda o ultimo elemento
+	while (i >= 0) //o loop vai do final ao comeco 'avancando' os elementos
 	{
-		if (i != 0)
+		if (i != 0) //aqui ele verfica se nao eh o primeiro elemento
 		{
 			L[i] = L[i-1];
 		} 
-		else if (i == 0)
+		else if (i == 0) //caso seja, ele troca com ultimo pela variavel que ja usamos antes do loop
 		{
 			L[i] = final;
 		}
