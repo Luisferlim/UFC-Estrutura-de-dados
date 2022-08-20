@@ -17,8 +17,8 @@ int main()
     
     //chamando as funções
     insere_vetor(vetor, m);
-	manipula_vetor(vetor, m);
-	mostra_vetor(vetor, m);
+    manipula_vetor(vetor, m);
+    mostra_vetor(vetor, m);
 	
 	return 0;
 }
@@ -35,8 +35,8 @@ int insere_vetor (int* L, int m)
 
 void mostra_vetor(int* L, int m)
 {
-    cout << "aqui está o vetor propriamente manipulado: ";
-	cout << "[";
+    cout << "aqui esta o vetor propriamente manipulado: ";
+	cout << "["; // isso aqui serve so para embelezar a saida
 	for (int i = 0; i < m; i++)
 	{
 		cout << L[i] << ", ";
@@ -46,17 +46,17 @@ void mostra_vetor(int* L, int m)
 
 int manipula_vetor( int* L, int m)
 {
-	int aux;
-	int i = 0;
+	int aux; //para manipular cada elemento
+	int i = 0; //para inicializar o while
 	while(i<m)
 	{
-		if (i%2 == 0)
+		if (i%2 == 0) // se for par
 		{
 			if(L[i]%2 == 0)
 			{
-				i++;
+				i++; //continua o loop
 			}
-			else
+			else //aqui ele procura um par para trocar com o elemento impar que ele achou
 			{
 				for (int j = i; j<m; j++)
 				{
@@ -71,13 +71,13 @@ int manipula_vetor( int* L, int m)
 			}
 		}
 		
-		if (i%2 != 0)
+		if (i%2 != 0) // se for impar
 		{
 			if(L[i]%2 != 0)
 			{
-				i++;
+				i++; //continua o loop
 			}
-			else
+			else //aqui ele procura um impar para trocar com o elemento par que ele achou
 			{
 				for (int j = i; j<m; j++)
 				{
