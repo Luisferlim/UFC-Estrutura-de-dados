@@ -46,7 +46,7 @@ void mostra_vetor(int* L, int m)
 
 int manipula_vetor( int* L, int m)
 {
-	int i = 0, aux; /
+	int i = 0, aux; 
 	while (i < m/2) //o loop so vai ate a metade dos elementos porque troca 2 elementos de uma vez
 	{
 		aux = L[i];
