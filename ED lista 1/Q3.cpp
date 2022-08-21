@@ -48,7 +48,6 @@ void mostra_vetor(int* L, int m)
 
 int manipula_vetor( int* L, int m)
 {
-    int aux; //auxiliar para operações com elementos do vetor
     int pontaux = m/2; // esse aqui é um ponteiro' para manipular elementos no vetor aux
     int vetaux[m/2]; // isso eh um vetor aux para ordenar corretamente os elementos
     int contador = 0; // contador de elementos do vetor aux
@@ -66,7 +65,6 @@ int manipula_vetor( int* L, int m)
 	while (i<m)
 	{
 		//logica da questao em si
-		aux = L[i];
 		L[i] = L[pontaux];
 		L[i-1] = vetaux[contador];
 		
