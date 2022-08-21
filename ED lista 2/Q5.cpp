@@ -14,11 +14,11 @@ int main()
 
     cout << "digite o tamanho do vetor L: ";
     cin >> m;
-    int vetor[m]; //criação do vetor L, aqui chamado de vetor somente
+    int vetor[m]; //criaÃ§Ã£o do vetor L, aqui chamado de vetor somente
     
-    //chamando as funções
+    //chamando as funÃ§Ãµes
     insere_vetor(vetor, m);
-	elementos_mais_distantes(vetor, m);
+    elementos_mais_distantes(vetor, m);
 	
 	
 	return 0;
@@ -47,7 +47,7 @@ int elementos_mais_distantes( int* L, int m)
 	{
 		for(int j = 0; j < m; j++)
 		{
-			//pega o valor absoluto entre as duas posições
+			//pega o valor absoluto entre as duas posiÃ§Ãµes
 			absolute = abs(L[i] - L[j]);
 			//comparar os valores absolutos e atribuir numa varivel que guarda o maior valor absoluto
 			if (absolute > maior)
@@ -61,5 +61,4 @@ int elementos_mais_distantes( int* L, int m)
 	
 	// printar os elementos com maior valor absoluto da diferenca entre eles
 	cout << "\nos elementos mais afastados sao: " << ele1 << " e " << ele2; 
-		return *L; //aqui ele retorna o vetor manipulado
 }
