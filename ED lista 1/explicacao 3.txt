@@ -1,0 +1,29 @@
+okay, para começar, inciamos:
+um aux para operar na troca de elementos no vetor
+um ponteiro (ou 'i') do vetor auxiliar, em resumo significa uma posição nesse vetor}
+o proprio vetor auxiliar
+e um contador iniciando em 0 para auxiliar na percorrição" do vetor
+
+primeiramente eu inicio um i=0 e começo um laço while
+o while percorre o vetor auxiliar e guarda as primeiras posições nele
+pronto, agora temos um vetor auxiliar com as primeiras posições 
+(que devem ficar nas posições pares) 0 a x (x é a ultima posição par)
+
+beleza, agora iniciamos um novo while pra aplicar a logica, ela funciona da
+seguinte forma: 
+o nosso 'i' vai de 1 a y, ou seja, i é sempre impar
+nós guardamos a posição L[i] em um aux porque iremos mexer nele
+nosso L[i] vai receber a posição L correspondente aos numeros que vem depois
+do elemento m/2 que são os ultimos, ficam na posição L[i] que é impar
+
+após isso, a posição L[i-1], que é par, recebe a posição no vetor auxiliar 
+correspondente *lembre-se que o vetor auxiliar guarda os primeiros elementos
+do nosso vetor, ou seja, eles tem que ficar nas posições pares
+
+ao final, nós aumentamos um no contador (para ir para o proximo elemento do 
+vetor auxiliar, que deve ser colocado nas posições pares)
+aumentamos um no ponteiro dos numeros que estao no final, para ir para o 
+proximo numero que está nos numeros finais, que deve ser colocado na posição
+i ou seja, numa posição ímpar.
+e somamos 2 ao i, para que ele percorra os impares e faça as operações serem
+possíveis.  
