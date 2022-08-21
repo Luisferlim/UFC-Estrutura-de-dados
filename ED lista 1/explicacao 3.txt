@@ -1,29 +1,26 @@
-okay, para começar, inciamos:
-um aux para operar na troca de elementos no vetor
-um ponteiro (ou 'i') do vetor auxiliar, em resumo significa uma posição nesse vetor}
-o proprio vetor auxiliar
-e um contador iniciando em 0 para auxiliar na percorrição" do vetor
+Okay, para começar, inciamos:
+Um ponteiro (ou 'i') do vetor auxiliar, em resumo significa uma posição nesse vetor
+O proprio vetor auxiliar com m/2, ou seja, metade dos elementos
+Um contador iniciando em 0 para auxiliar no percurso do vetor
 
-primeiramente eu inicio um i=0 e começo um laço while
-o while percorre o vetor auxiliar e guarda as primeiras posições nele
+Primeiramente eu inicio um i=0 e comeco um laco while
+O while percorre o vetor auxiliar e preenche-o com os primeiro elementos de L, até a sua metade
 pronto, agora temos um vetor auxiliar com as primeiras posições 
-(que devem ficar nas posições pares) 0 a x (x é a ultima posição par)
+(que devem ficar nas posições pares) 0 a x (x é a ultima posição par) *
 
-beleza, agora iniciamos um novo while pra aplicar a logica, ela funciona da
-seguinte forma: 
-o nosso 'i' vai de 1 a y, ou seja, i é sempre impar
-nós guardamos a posição L[i] em um aux porque iremos mexer nele
-nosso L[i] vai receber a posição L correspondente aos numeros que vem depois
-do elemento m/2 que são os ultimos, ficam na posição L[i] que é impar
+Beleza, agora iniciamos um novo while pra aplicar a logica, ela funciona da seguinte forma: 
+O nosso 'i' vai de 1 a y, onde y eh o a ultima posicao impar do vetor e i é sempre impar
+Nosso L[i] vai receber a posição L[ponteiro} correspondente aos numeros que vem depois
+do elemento m/2 que são os ultimos, portanto, devem ficar nas posicoes L[i] que sao impares
 
-após isso, a posição L[i-1], que é par, recebe a posição no vetor auxiliar 
-correspondente *lembre-se que o vetor auxiliar guarda os primeiros elementos
-do nosso vetor, ou seja, eles tem que ficar nas posições pares
+Após isso, a posição L[i-1], que é par, recebe a posição no vetor auxiliar 
+Correspondente *lembre-se que o vetor auxiliar guarda os primeiros elementos
+do nosso vetor, ou seja, eles devem ficar nas posições pares
 
-ao final, nós aumentamos um no contador (para ir para o proximo elemento do 
+Ao final, nós incrementamos 1 ao contador (para ir para o proximo elemento do 
 vetor auxiliar, que deve ser colocado nas posições pares)
-aumentamos um no ponteiro dos numeros que estao no final, para ir para o 
+Incrementamos 1 no ponteiro dos numeros que estao no final, para ir para o 
 proximo numero que está nos numeros finais, que deve ser colocado na posição
-i ou seja, numa posição ímpar.
-e somamos 2 ao i, para que ele percorra os impares e faça as operações serem
-possíveis.  
+i ,ou seja, numa posição impar
+e incrementamos 2 ao i, para que ele percorra os impares e faca as operacoes serem
+possiveis
