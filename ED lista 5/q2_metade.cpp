@@ -44,53 +44,53 @@ int bolha2 (int size , int* L){ //vai da metade ate o final do vetor
 void merge(int array[], int const left, int const mid,
            int const right)
 {
-    auto const subArrayOne = mid - left + 1;
-    auto const subArrayTwo = right - mid;
+    auto const sub1 = mid - left + 1;
+    auto const sub2 = right - mid;
   
-    auto *leftArray = new int[subArrayOne],
-         *rightArray = new int[subArrayTwo];
+    auto *larray = new int[sub1],
+         *rarray = new int[sub2];
   
-    for (auto i = 0; i < subArrayOne; i++)
-        leftArray[i] = array[left + i];
-    for (auto j = 0; j < subArrayTwo; j++)
-        rightArray[j] = array[mid + 1 + j];
+    for (auto i = 0; i < sub1; i++)
+        larray[i] = array[left + i];
+    for (auto j = 0; j < sub2; j++)
+        rarray[j] = array[mid + 1 + j];
   
-    auto indexOfSubArrayOne
+    auto isub1
         = 0,
-        indexOfSubArrayTwo
+        isub2
         = 0; 
-    int indexOfMergedArray
+    int imerge
         = left; 
 
-    while (indexOfSubArrayOne < subArrayOne
-           && indexOfSubArrayTwo < subArrayTwo) {
-        if (leftArray[indexOfSubArrayOne]
-            <= rightArray[indexOfSubArrayTwo]) {
-            array[indexOfMergedArray]
-                = leftArray[indexOfSubArrayOne];
-            indexOfSubArrayOne++;
+    while (isub1 < sub1
+           && isub2 < sub2) {
+        if (larray[isub1]
+            <= rarray[isub2]) {
+            array[imerge]
+                = larray[isub1];
+            isub1++;
         }
         else {
-            array[indexOfMergedArray]
-                = rightArray[indexOfSubArrayTwo];
-            indexOfSubArrayTwo++;
+            array[imerge]
+                = rarray[isub2];
+            isub2++;
         }
-        indexOfMergedArray++;
+        imerge++;
     }
-    while (indexOfSubArrayOne < subArrayOne) {
-        array[indexOfMergedArray]
-            = leftArray[indexOfSubArrayOne];
-        indexOfSubArrayOne++;
-        indexOfMergedArray++;
+    while (isub1 < sub1) {
+        array[imerge]
+            = larray[isub1];
+        isub1++;
+        imerge++;
     }
-    while (indexOfSubArrayTwo < subArrayTwo) {
-        array[indexOfMergedArray]
-            = rightArray[indexOfSubArrayTwo];
-        indexOfSubArrayTwo++;
-        indexOfMergedArray++;
+    while (isub2 < sub2) {
+        array[imerge]
+            = rarray[isub2];
+        isub2++;
+        imerge++;
     }
-    delete[] leftArray;
-    delete[] rightArray;
+    delete[] larray;
+    delete[] rarray;
 }
  
 void mergeSort(int array[], int const begin, int const end)
