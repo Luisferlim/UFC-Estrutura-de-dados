@@ -13,9 +13,7 @@ int bolha (int size , int* L){ //complexidade (N2 -n)/2
         {
             if (L[j] > L[j+1])
             {
-               aux = L[j];
-               L[j] = L[j+1];
-               L[j+1] = aux; 
+               swap(L[j], L[j+1]);
             }
             j++;
         }
@@ -34,9 +32,7 @@ int insercao ( int size , int* L){
         {
             if (L[j] < L[j-1])
             {
-                aux = L[j];
-                L[j] = L[j-1];
-                L[j-1] = aux;
+                swap(L[j], L[j-1]);
             }
             else 
             {
@@ -66,9 +62,7 @@ int selecao (int size , int* L){//procura o minimo e troca com a posição relat
         }
         if (L[j] > L[min_index])
         {
-            aux = L[j];
-            L[j] = L[min_index];
-            L[min_index] = aux;
+           swap(L[j], L[min_index]);
         }
         j++;
     }   
